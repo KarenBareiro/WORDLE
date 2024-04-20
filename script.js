@@ -1,19 +1,6 @@
-//ALGORITMO
-//si la palabra es igual a intento entonces imprimir GANASTE
-//si no si primer_intento es igual a primer_palabra entonces imprimir primer_intento verde
-//sino si primer_intento existe palabra entonces imprimir primer_intento amarillo
-//sino entonces imprimir primer_intento gris
-//SI INTENTOS ES IGUAL A CERO ENTONCES IMPRIMIR GRIS
-
-
-
-
-
-
 
 let intentos = 6;
 let lista = ["APPLE", "GLOBE", "HELLO", "STORE", "SUNNY","BRAIN", "AFTER"]
-// console.log("elementos",lista.length);
 let posicion = Math.floor(Math.random() * lista.length)
 let palabra = lista[posicion];
 console.log(palabra);
@@ -27,15 +14,9 @@ function intentar() {
     const ROW = document.createElement("div");
     ROW.className = "row";
     console.log('div', ROW);
-
-    // if (palabra === intento_user) {
-    //     terminar("<h1>GANASTE!😀</h1>")
-    //     return terminar;
-    // } else {
     intentos = intentos - 1; //intentos --1
     console.log("te quedan", intentos, "intentos");
     for (pos in palabra) {
-        // console.log(palabra[pos],); //imprime posicion del elemento
         const SPAN = document.createElement("span");
         SPAN.className = "letter"
         SPAN.innerHTML = intento_user[pos];
@@ -74,14 +55,3 @@ function terminar(mensaje) {
     let contenedor = document.getElementById("guesses");
     contenedor.innerHTML = mensaje;
 }
-// intentar(leerIntento);
-
-
-
-
-// intentar(document.getElementById("guess-input"))
-// // intentar ("HELLO")
-// // intentar ("GLOBE")
-
-// //DOM (Document Object Model)
-// console.log("input del dom",document.getElementById("guess-input".value))
