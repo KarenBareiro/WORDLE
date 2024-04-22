@@ -1,13 +1,12 @@
 
 let intentos = 6;
-let lista = ["APPLE", "GLOBE", "HELLO", "STORE", "SUNNY","BRAIN", "AFTER"]
+let lista = ["APPLE", "GLOBE", "HELLO", "STORE", "SUNNY", "BRAIN", "AFTER"]
 let posicion = Math.floor(Math.random() * lista.length)
 let palabra = lista[posicion];
 console.log(palabra);
 const BUTTON = document.getElementById("guess-button");
 console.log(BUTTON);
 BUTTON.addEventListener("click", intentar);
-
 function intentar() {
     const intento_user = leerIntento();
     const GRID = document.getElementById("grid");
@@ -35,10 +34,10 @@ function intentar() {
     }
     GRID.appendChild(ROW);
     if (palabra === intento_user) {
-        terminar("<h1>GANASTE!😀</h1>");
-    } 
+        terminar("<p>GANASTE!😀</p>");
+    }
     if (intentos === 0) {
-        terminar("<h1>PERDISTE!😖</h1>");
+        terminar("<p>PERDISTE!😖</p>");
     }
 }
 
@@ -55,3 +54,4 @@ function terminar(mensaje) {
     let contenedor = document.getElementById("guesses");
     contenedor.innerHTML = mensaje;
 }
+
