@@ -1,10 +1,13 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url("./img/giphy.gif");
+    background-size: cover;
   }
      
   h1 {
     text-align: center;
     margin-top: 50px;
+    font-size: 60px;
   }
      
   #guess-input {
@@ -22,9 +25,10 @@ body {
     padding: 10px 20px;
     font-size: 18px;
     background-color: #0CBABA;
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 3px;
+    transform: scale(120%);
   }
      
   button:active {
@@ -33,7 +37,7 @@ body {
      
   .letter {
       border: 1px solid black;
-      padding: 3px;
+      padding: 12px;
       margin: 3px;
       min-width: 20px;
       text-align: center;
@@ -42,8 +46,20 @@ body {
      
   .row{
       margin-bottom: 10px;
+      text-align: center;
+      margin-top: 20px;
+
   }
      
   .input-area{
       margin: 30px;
+  }
+  
+  #guesses p{
+    text-align: center;
+    margin-top: 0px;
+    font-size: 50px;
+    color: white;  
+    border:1px solid black;
+    border-width: 0px;
   }
